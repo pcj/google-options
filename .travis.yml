@@ -31,6 +31,8 @@ before_install:
   - ./install.sh --user
   - rm -f install.sh
 
+install: mvn install -DskipTests -Dgpg.skip
+
 script:
   - |
     bazel \

@@ -1,8 +1,8 @@
-# google-options [![Build Status](https://travis-ci.org/pcj/google-options.svg?branch=master)](https://travis-ci.org/pcj/google-options)
+# google-options [![Build Status](https://travis-ci.org/pcj/google-options.svg?branch=master)](https://travis-ci.org/pcj/google-options) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.pcj/google-options/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.pcj/google-options) [![JavaDoc](https://img.shields.io/badge/apidoc-1.0.0-orange.svg)](https://pcj.github.io/google-options/)
 
 <table><tr>
 <td><img src="https://avatars0.githubusercontent.com/u/1342004?v=3&s=200" width="120"/></td>
-<td><img src="http://cdn.osxdaily.com/wp-content/uploads/2014/08/terminal-icon-osx.png" width="120"/></td>
+<td><img src="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/128/System-settings-icon.png" width="120"/></td>
 </tr><tr>
 <td>Google</td>
 <td>Options</td>
@@ -15,26 +15,27 @@ separate jar for general utility.
 
 # Installation
 
-Bazel
+### Bazel
 
 ```python
-git_repository(
-  name = "com_github_pcj_google_options",
-  remote = "https://github.com/pcj/google-options.git",
-  tag = "1.0.0",
-)
-
-bind(
-  name = "google_options",
-  actual = "@com_github_pcj_google_options//src/main/java/com/google/devtools/common/options",
+maven_jar(
+    name = "com_github_pcj_google_options",
+    artifact = "com.github.pcj:google-options:jar:1.0.0",
+    sha1 = "85d54fe6771e5ff0d54827b0a3315c3e12fdd0c7",
 )
 ```
 
-Maven/Gradle/...
+### Gradle
 
-> Note: *the maven artifact is not yet available*.
+```groovy
+dependencies {
+  compile 'com.github.pcj:google-options:1.0.0'
+}
+```
 
-```markup
+### Maven
+
+```xml
 <dependency>
   <groupId>com.github.pcj</groupId>
   <artifactId>google-options</artifactId>
@@ -136,3 +137,5 @@ Please consult the
 [tests](src/test/java/com/google/devtools/common/options/) and
 [source code](src/main/java/com/google/devtools/common/options/) for
 more detailed information.
+
+[JavaDoc API documentation](https://pcj.github.io/google-options/) is housed in the gh-pages branch.
